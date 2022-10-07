@@ -11,7 +11,18 @@ Django = "^4.1.2"
 gunicorn = "^20.1.0"
 
 [tool.poetry.dev-dependencies]
+pytest-django = "^4.5.2"
+isort = "^5.10.1"
+black = "^22.10.0"
+flake8 = "^5.0.4"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
+[tool.black]
+line-length = 79
