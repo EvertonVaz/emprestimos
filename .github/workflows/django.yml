@@ -30,8 +30,5 @@ jobs:
           if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
           run: poetry install --no-interaction
 
-        - name: Lint
-          run: poetry run make lint
-
         - name: Run tests
           run: poetry run pytest app/
